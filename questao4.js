@@ -9,3 +9,12 @@ function converterMoeda(valorReais) {
     alert(`Valor em euro: € ${valorEmEuro.toFixed(2)}`);
     alert(`Valor em dólar: US$ ${valorEmDolar.toFixed(2)}`);
 }
+
+let entrada = prompt("Digite um valor em reais (R$):");
+let valorReais = parseFloat(entrada);
+
+if (!isNaN(valorReais) && valorReais >= 0) {
+    converterMoeda(valorReais);
+} else {
+    alert("Valor inválido. Digite um número positivo.");
+}
