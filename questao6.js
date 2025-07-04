@@ -6,3 +6,15 @@ function fibonacci(n) {
 
 let entrada = prompt("Digite a quantidade de termos da sequência de Fibonacci:");
 let n = parseInt(entrada);
+
+if (!isNaN(n) && n > 0) {
+    let sequencia = "";
+
+    for (let i = 0; i < n; i++) {
+        sequencia += fibonacci(i) + (i < n - 1 ? ", " : "");
+    }
+
+    alert(`Os ${n} primeiros termos da sequência de Fibonacci são:\n${sequencia}`);
+} else {
+    alert("Entrada inválida. Digite um número inteiro positivo.");
+}
