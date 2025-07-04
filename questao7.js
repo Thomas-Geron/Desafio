@@ -16,3 +16,9 @@ for (let i = 0; i < fraseFormatada.length / 2; i++) {
         break;
     }
 }
+
+if (ehPalindromo) {
+    alert("É um palíndromo!");
+} else {
+    alert("Não é um palíndromo.");
+}
