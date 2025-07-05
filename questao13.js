@@ -67,3 +67,40 @@ function calcularPontuacaoMedia() {
     let media = total / time.length;
     alert("Pontuação média do time: " + media.toFixed(2));
 }
+
+function menu() {
+    let opcao;
+    do {
+        opcao = prompt(
+            "Menu:\n" +
+            "1 - Adicionar jogador\n" +
+            "2 - Buscar por posição\n" +
+            "3 - Listar time\n" +
+            "4 - Calcular pontuação média\n" +
+            "5 - Sair\n" +
+            "Escolha uma opção:"
+        );
+
+        switch (opcao) {
+            case "1":
+                adicionarJogador();
+                break;
+            case "2":
+                buscarPorPosicao();
+                break;
+            case "3":
+                listarTime();
+                break;
+            case "4":
+                calcularPontuacaoMedia();
+                break;
+            case "5":
+                alert("Encerrando o programa...");
+                break;
+            default:
+                alert("Opção inválida. Tente novamente.");
+        }
+    } while (opcao !== "5");
+}
+
+menu();
