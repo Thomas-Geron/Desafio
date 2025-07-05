@@ -51,3 +51,19 @@ function listarTime() {
 
     alert(lista);
 }
+
+function calcularPontuacaoMedia() {
+    if (time.length === 0) {
+        alert("Não há jogadores para calcular a média.");
+        return;
+    }
+
+    let total = 0;
+
+    for (let i = 0; i < time.length; i++) {
+        total += time[i].pontuacao;
+    }
+
+    let media = total / time.length;
+    alert("Pontuação média do time: " + media.toFixed(2));
+}
