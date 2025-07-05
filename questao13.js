@@ -35,3 +35,19 @@ function buscarPorPosicao() {
         alert("Nenhum jogador encontrado nessa posição.");
     }
 }
+
+function listarTime() {
+    if (time.length === 0) {
+        alert("Nenhum jogador cadastrado.");
+        return;
+    }
+
+    let lista = "Jogadores cadastrados:\n";
+
+    for (let i = 0; i < time.length; i++) {
+        let j = time[i];
+        lista += `- ${j.nome}, ${j.idade} anos, Posição: ${j.posicao}, Pontuação: ${j.pontuacao}\n`;
+    }
+
+    alert(lista);
+}
